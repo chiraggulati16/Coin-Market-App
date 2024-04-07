@@ -24,7 +24,8 @@ export const styles = StyleSheet.create({
         textAlign: "center",
         marginTop: verticalScale(15),
         lineHeight: verticalScale(18),
-        marginHorizontal: scale(30)
+        marginHorizontal: scale(30),
+        fontFamily: Fonts.poppins400
     },
     image: {
         width: scale(70),

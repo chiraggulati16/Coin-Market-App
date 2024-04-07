@@ -4,6 +4,7 @@ import Intro from "../screens/beforeLoginScreens/Intro";
 import Login from "../screens/beforeLoginScreens/Login";
 import { Screen } from "../utils/screens";
 import Signup from "../screens/beforeLoginScreens/Signup";
+import HomeTabs from "./HomeTabs";
 
 const BeforeLoginStack = createNativeStackNavigator();
 
@@ -17,6 +18,7 @@ const BeforeLoginNavigator = () => {
             <BeforeLoginStack.Screen name={Screen.ONBOARDING} component={Intro} />
             <BeforeLoginStack.Screen name={Screen.LOGIN} component={Login} />
             <BeforeLoginStack.Screen name={Screen.SIGNUP} component={Signup} />
+            <BeforeLoginStack.Screen name={Screen.HOME_TAB} component={HomeTabs}/>
         </BeforeLoginStack.Navigator>
     )
 }

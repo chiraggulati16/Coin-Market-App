@@ -23,4 +23,9 @@ export default {
   NEW_TO_APP: 'New to CoinMarketCap? ',
   PASSWORD_MESSAGE: 'Password should contain both letters and numbers, with minimum length of 8 characters',
   ALREADY_HAVE_ACCOUNT: 'Already have an account? ',
+  NEWS: "News",
+  SEARCH: "Search",
+  PORTFOLIO: "Portfolio",
+  COMMUNITY: "Community"
+
 };

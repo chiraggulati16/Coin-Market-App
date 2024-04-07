@@ -18,8 +18,7 @@ export const styles = StyleSheet.create({
         marginTop: verticalScale(30)
     },
     buttonText: {
-        fontFamily: Fonts.poppins400,
-        fontWeight: "bold",
+        fontFamily: Fonts.poppins700,
         color: Colors.light.secondary
     },
     forgotPassContainer: { 

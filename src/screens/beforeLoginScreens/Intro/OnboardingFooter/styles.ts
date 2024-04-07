@@ -1,10 +1,12 @@
 import { Dimensions, Platform, StyleSheet } from "react-native";
 import { scale, verticalScale } from "react-native-size-matters";
+import { Colors, Fonts } from "../../../../utils";
 
 export const styles = StyleSheet.create({
     container: {
         height: verticalScale(120),
         width: Dimensions.get("window").width,
+        marginTop: verticalScale(10)
         
     },
     buttonContainer: {
@@ -29,24 +31,24 @@ export const styles = StyleSheet.create({
         borderRadius: 10,
         alignItems: 'center',
         justifyContent: "center",
-        backgroundColor: "#3861fb",
-        color:"#fff",
+        backgroundColor: Colors.light.purple100,
+        color: Colors.light.secondary,
         padding: 10,
       },
       buttonText: {
-        color: "#000",
-        fontWeight: "600"
+        color: Colors.light.primary,
+        fontFamily: Fonts.poppins500
       },
       homeParent: {
         alignSelf: "center", 
         marginBottom: verticalScale(20)
       },
       homeButtonText: {
-        fontWeight:"bold",
-        color: "#000"
+        fontFamily: Fonts.poppins500,
+        color: Colors.light.grey500,
       },
       signupButtonText: { 
-        fontWeight: "bold", 
-        color: "#fff" 
+        fontFamily: Fonts.poppins500,
+        color: Colors.light.secondary
       }
 })

@@ -3,7 +3,6 @@ import { Text, View } from "react-native";
 
 const CoinDataRow = ({data} : any)=> {
 
-   // console.log(props)
     return(
         <View style={{height: 40, width: "100%"}}>
             <Text style={{color: "#000"}}>

@@ -1,5 +1,5 @@
-import React, {useCallback, useEffect, useRef, useState} from 'react';
-import {Dimensions, Platform, Text, View} from 'react-native';
+import React, {useCallback, useState} from 'react';
+import {Dimensions, Platform, View} from 'react-native';
 import {styles} from './styles';
 import {FlashList} from '@shopify/flash-list';
 import Labels from '../../../localization/localization';
@@ -8,29 +8,30 @@ import OnboardingFooter from './OnboardingFooter';
 import SliderDots from '../../../components/SliderDots';
 import {verticalScale} from 'react-native-size-matters';
 import { IntroDataModel } from '../../../models';
+import { Images } from '../../../assets/ImageProperties';
 
 
 let data: IntroDataModel[] = [
   {
-    icon: require('../../../assets/images/logo.png'),
+    icon: Images.Logo,
     heading: Labels.ONBARDING_1_HEADING,
     description: Labels.ONBOARDING_1_BODY,
     type: 0,
   },
   {
-    icon: require('../../../assets/animations/animation_onboarding_1.json'),
+    icon: Images.Onboarding1,
     heading: Labels.ONBARDING_2_HEADING,
     description: Labels.ONBOARDING_2_BODY,
     type: 1,
   },
   {
-    icon: require('../../../assets/animations/animation_onboarding_2.json'),
+    icon: Images.Onboarding2,
     heading: Labels.ONBARDING_3_HEADING,
     description: Labels.ONBOARDING_3_BODY,
     type: 1,
   },
   {
-    icon: require('../../../assets/animations/animation_onboarding_3.json'),
+    icon: Images.Onboarding3,
     heading: Labels.ONBARDING_4_HEADING,
     description: Labels.ONBOARDING_4_BODY,
     type: 1,
@@ -41,10 +42,6 @@ const {width, height} = Dimensions.get('window');
 
 const Intro = (props: any) => {
   const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    console.log(index);
-  }, [index]);
 
   const onScroll = useCallback((event: any) => {
     const slideSize = event.nativeEvent.layoutMeasurement.width;

@@ -39,6 +39,9 @@ target 'CoinMarketApp' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+  pod 'GoogleUtilities', :modular_headers => true
+  pod 'FirebaseCore', :modular_headers => true
+
   target 'CoinMarketAppTests' do
     inherit! :complete
     # Pods for testing
