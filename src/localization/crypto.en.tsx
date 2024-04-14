@@ -26,6 +26,10 @@ export default {
   NEWS: "News",
   SEARCH: "Search",
   PORTFOLIO: "Portfolio",
-  COMMUNITY: "Community"
-
+  COMMUNITY: "Community",
+  MARKETS: "Markets",
+  MARKET_CAP: "Market Cap",
+  PRICE: "Price",
+  VOL_CHANGE_24H: "24h %",
+  HASH: "#"
 };

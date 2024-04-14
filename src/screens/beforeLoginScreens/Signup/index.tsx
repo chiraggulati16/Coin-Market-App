@@ -20,7 +20,7 @@ const Signup = () => {
   };
   return (
       <View style={styles.container}>
-        <NormalHeader />
+        <NormalHeader headerTitle={Labels.SIGN_UP} rightText={Labels.LOG_IN} />
         <View style={{margin: scale(15)}}>
           <Text style={styles.labelText}>{Labels.EMAIL_ADDRESS}</Text>
           <CustomTextInput placeholder={Labels.ENTER_EMAIL} />

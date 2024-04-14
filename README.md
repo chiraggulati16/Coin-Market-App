@@ -1,5 +1,15 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
+## Screenshots
+
+![App Screenshot](https://github.com/chiraggulati16/Coin-Market-App/blob/main/src/assets/Screenshot/screenshot1.png)
+
+![App Screenshot](https://github.com/chiraggulati16/Coin-Market-App/blob/main/src/assets/Screenshot/screenshot2.png)
+
+![App Screenshot](https://github.com/chiraggulati16/Coin-Market-App/blob/main/src/assets/Screenshot/screenshot5.png)
+
+![App Screenshot](https://github.com/chiraggulati16/Coin-Market-App/blob/main/src/assets/Screenshot/screenshot6.png)
+
 # Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.

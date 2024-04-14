@@ -1,29 +1,44 @@
-import axios from "axios";
-import React, { useEffect, useRef, useState } from "react";
-import { FlatList, Image, ImageBackground, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
-import CoinDataRow from "./CoinDataRow";
-import { Images } from "../../../assets/ImageProperties";
+import React, {useEffect, useState} from 'react';
+import {FlatList, StyleSheet, View} from 'react-native';
+import HeaderWithSearch from '../../../components/HeaderWithSearch';
+import Labels from '../../../localization/localization';
+import ListHeader from '../../../components/ListHeader';
+import {Colors} from '../../../utils';
+import {ListingData, ListingRequest, State} from '../../../models';
+import {useDispatch, useSelector} from 'react-redux';
+import CoinDataRow from './CoinDataRow';
+import { getListingData } from '../../../redux/slices/home';
+import { AppDispatch } from '../../../redux/store';
 
 const HomeScreen = () => {
-    const [marketData, setMarketData] = useState([]);
+  const [marketData, setMarketData] = useState<ListingData[]>([]);
+  const dispatch = useDispatch<any>();
+  const homeState = useSelector((state: State) => state.homeReducer);
 
-    useEffect(() => {
-
-    },[])
-    return (
-      <View style={styles.main}>
-         
-       
-      </View>
-    )
+  useEffect(() => {
+    let params: ListingRequest = {
+      start : homeState?.start,
+      limit: 50
+    }
+    dispatch(getListingData(params))
+  },[homeState?.start])
+  return (
+    <View style={styles.main}>
+      <HeaderWithSearch headerTitle={Labels.MARKETS} />
+      <ListHeader />
+      <FlatList
+        data={homeState?.cryptoList}
+        renderItem={({item, index}) => <CoinDataRow data={item} index={index}/>}
+      />
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
-  main:{
-    flex:1,
-    backgroundColor: "yellow"   
+  main: {
+    flex: 1,
+    backgroundColor: Colors.light.secondary,
   },
-  });
+});
 
-
-export default HomeScreen
+export default HomeScreen;

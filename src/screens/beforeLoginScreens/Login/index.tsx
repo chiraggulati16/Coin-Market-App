@@ -16,7 +16,7 @@ const Login = () => {
   };
   return (
     <View style={styles.container}>
-      <NormalHeader />
+      <NormalHeader headerTitle={Labels.LOG_IN} rightText={Labels.SIGN_UP} />
       <View style={{margin: scale(15)}}>
         <Text style={styles.labelText}>{Labels.EMAIL_ADDRESS}</Text>
         <CustomTextInput placeholder={Labels.ENTER_EMAIL} />
@@ -35,7 +35,8 @@ const Login = () => {
         <CustomButton
           parentStyle={styles.buttonContainer}
           textStyle={styles.buttonText}
-          title={Labels.LOG_IN}/>
+          title={Labels.LOG_IN}
+        />
 
         <View style={styles.lineContainer}>
           <View style={styles.horizontalLine}></View>

@@ -14,5 +14,7 @@ export const Images = {
     News: require("./images/news.png"),
     Search: require("./images/search.png"),
     Portfolio: require("./images/portfolio.png"),
-    Community: require("./images/community.png")
+    Community: require("./images/community.png"),
+    Diamond: require("./images/diamond.png"),
+    User: require("./images/user.png")
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Image, Text, TextInput, TouchableOpacity, View} from 'react-native';
 import {styles} from './styles';
 import {Images} from '../../assets/ImageProperties';
@@ -27,22 +27,26 @@ const CustomTextInput = ({
   isPassword = false,
   isSignup = false,
 }: CustomTextInputProps) => {
+
+  const [showPassword, setShowPassword] = useState(isPassword)
   return (
     <View>
       <View style={styles.container}>
         <TextInput
           placeholder={placeholder}
-          secureTextEntry={isPassword}
+          secureTextEntry={showPassword}
           numberOfLines={1}
           style={styles.textInput}
           placeholderTextColor={Colors.light.grey400}
         />
         {isPassword && (
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=>{
+            setShowPassword(!showPassword)
+          }}>
             <Image
               tintColor={Colors.light.grey400}
               style={styles.icon}
-              source={Images.HidePassword}
+              source={!showPassword? Images.ShowPassowrd : Images.HidePassword}
             />
           </TouchableOpacity>
         )}
