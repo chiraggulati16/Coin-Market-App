@@ -10,6 +10,8 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 ![App Screenshot](https://github.com/chiraggulati16/Coin-Market-App/blob/main/src/assets/Screenshot/screenshot6.png)
 
+<img src="https://github.com/chiraggulati16/Coin-Market-App/blob/main/src/assets/Screenshot/screenshot1.png" width="100" height="100">
+
 # Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
