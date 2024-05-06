@@ -40,7 +40,7 @@ const homeSlice = createSlice({
   },
   extraReducers: builder => {
     builder.addCase(getListingData.fulfilled, (state: any, action) => {
-      state.cryptoList = action?.payload?.data;
+      state.cryptoList = [...state.cryptoList, ...action?.payload?.data];
       state.totalCount = action?.payload?.status?.total_count;
     });
   },

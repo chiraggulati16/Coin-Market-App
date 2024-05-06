@@ -7,7 +7,7 @@ import {Colors} from '../../../utils';
 import {ListingData, ListingRequest, State} from '../../../models';
 import {useDispatch, useSelector} from 'react-redux';
 import CoinDataRow from './CoinDataRow';
-import { getListingData } from '../../../redux/slices/home';
+import { getListingData, setStart } from '../../../redux/slices/home';
 import { AppDispatch } from '../../../redux/store';
 
 const HomeScreen = () => {
@@ -22,6 +22,13 @@ const HomeScreen = () => {
     }
     dispatch(getListingData(params))
   },[homeState?.start])
+
+  const loadMoreData = () => {
+    if(homeState?.totalCount > homeState?.start) {
+      let start = homeState?.start +50;
+      dispatch(setStart(start));
+    }
+  }
   return (
     <View style={styles.main}>
       <HeaderWithSearch headerTitle={Labels.MARKETS} />
@@ -29,6 +36,7 @@ const HomeScreen = () => {
       <FlatList
         data={homeState?.cryptoList}
         renderItem={({item, index}) => <CoinDataRow data={item} index={index}/>}
+        onEndReached={loadMoreData}
       />
     </View>
   );

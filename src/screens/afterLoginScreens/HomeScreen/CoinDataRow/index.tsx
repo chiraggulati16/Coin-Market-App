@@ -1,8 +1,7 @@
-import React, { Component } from "react";
-import { Image, Text, View } from "react-native";
-import { CoinRowProps, ListingData } from "../../../../models";
+import React from "react";
+import { Text, View } from "react-native";
+import { CoinRowProps } from "../../../../models";
 import { styles } from "./styles";
-import { ApiUrl } from "../../../../service/apiConfig";
 import { formatNumber } from "../../../../utils/utils";
 import { Colors } from "../../../../utils";
 import { ImageHandler } from "../../../../service/ImageHandler";
@@ -36,4 +35,4 @@ const CoinDataRow = ({data, index} : CoinRowProps)=> {
     )
 }
 
-export default CoinDataRow
+export default React.memo(CoinDataRow);

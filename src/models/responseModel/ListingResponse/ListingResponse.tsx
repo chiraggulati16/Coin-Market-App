@@ -3,7 +3,7 @@ import { Status } from "./Status";
 
 interface ListingResponse {
     status: Status
-    data: ListingData
+    data: ListingData[]
 }
 
 export type {ListingResponse}
