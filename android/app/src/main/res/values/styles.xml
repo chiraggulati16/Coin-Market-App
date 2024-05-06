@@ -6,4 +6,7 @@
         <item name="android:editTextBackground">@drawable/rn_edit_text_material</item>
     </style>
 
+    <style name="SplashScreen_FullScreen" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
 </resources>

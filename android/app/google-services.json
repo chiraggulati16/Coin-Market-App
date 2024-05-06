@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "50606158748",
+    "project_id": "crypto-tracker-1585c",
+    "storage_bucket": "crypto-tracker-1585c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:50606158748:android:a62892508325456ba50e59",
+        "android_client_info": {
+          "package_name": "com.coinmarketapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "50606158748-bqbb70asout6s5bogvq60ckt0jkj3e3r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.coinmarketapp",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "50606158748-qalaofdpt721h8jdpp0e2erod4aor1kj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCi10l3_D1X_iOQOgTY5tqAEq7kGR5ozCc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "50606158748-qalaofdpt721h8jdpp0e2erod4aor1kj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "50606158748-tjteqbcenj738h9j1jnbmhe83qvknj0t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.CoinMarketApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

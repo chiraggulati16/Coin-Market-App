@@ -9,11 +9,32 @@ import CustomTextInput from '../../../components/CustomTextInput';
 import {styles} from './styles';
 import {Images} from '../../../assets/ImageProperties';
 import NavigationService from '../../../navigation/NavigationService';
+import auth from '@react-native-firebase/auth';
+import { GoogleSignin } from '@react-native-google-signin/google-signin';
 
 const Login = () => {
+
+  GoogleSignin.configure({
+    webClientId: '50606158748-qalaofdpt721h8jdpp0e2erod4aor1kj.apps.googleusercontent.com',
+  });
   const navigateToSignup = () => {
     NavigationService.navigate(Screen.SIGNUP);
   };
+
+  const signInWithGoogle = async () => {
+      // Check if your device supports Google Play
+      await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
+      // Get the users ID token
+      const { idToken, user } = await GoogleSignin.signIn();
+    
+      console.log(user)
+      // Create a Google credential with the token
+      const googleCredential = auth.GoogleAuthProvider.credential(idToken);
+    
+      // Sign-in the user with the credential
+      return auth().signInWithCredential(googleCredential);
+    
+  }
   return (
     <View style={styles.container}>
       <NormalHeader headerTitle={Labels.LOG_IN} rightText={Labels.SIGN_UP} />
@@ -50,6 +71,7 @@ const Login = () => {
           title={Labels.CONTINUE_GOOGLE}
           image={Images.GoogleLogo}
           isImageButton={true}
+          onClick={signInWithGoogle}
         />
 
         <CustomButton
