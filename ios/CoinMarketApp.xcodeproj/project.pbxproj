@@ -17,6 +17,7 @@
 		1BC25A65BD5C451192811329 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D70A440B42CD4189AD4E3679 /* Poppins-ThinItalic.ttf */; };
 		1D236925E5184A2F81A39F78 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C1B997A78B4F7C8A4A7D2C /* Poppins-Italic.ttf */; };
 		1ECDB78123584901AAB417C1 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07ED563BF17345309BB7750D /* Poppins-Bold.ttf */; };
+		24B9A7312BE79E3C0092F2F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24B9A7302BE79E3B0092F2F3 /* GoogleService-Info.plist */; };
 		340192B7B2874E8C92C85A2B /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F01F5CEF237C4A779BF1DF57 /* Poppins-SemiBold.ttf */; };
 		519346AC8F1C4B8090F5954D /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FDD1DC04088242D58FF7AD51 /* Poppins-ExtraLightItalic.ttf */; };
 		5491D3403D2C45AFAE91E42B /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12F2BD16452D4E82B9D48C41 /* Poppins-Light.ttf */; };
@@ -61,6 +62,7 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = CoinMarketApp/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-CoinMarketApp-CoinMarketAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CoinMarketApp-CoinMarketAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F54E2C2294A4AEE93E832B9 /* Poppins-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Black.ttf"; path = "../src/assets/fonts/Poppins-Black.ttf"; sourceTree = "<group>"; };
+		24B9A7302BE79E3B0092F2F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		37C54B70CE70490780066477 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-MediumItalic.ttf"; path = "../src/assets/fonts/Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-CoinMarketApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinMarketApp.debug.xcconfig"; path = "Target Support Files/Pods-CoinMarketApp/Pods-CoinMarketApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-CoinMarketApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinMarketApp.release.xcconfig"; path = "Target Support Files/Pods-CoinMarketApp/Pods-CoinMarketApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		13B07FAE1A68108700A75B9A /* CoinMarketApp */ = {
 			isa = PBXGroup;
 			children = (
+				24B9A7302BE79E3B0092F2F3 /* GoogleService-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -324,6 +327,7 @@
 				159EFFFBD64D46D791F0AB10 /* Poppins-SemiBoldItalic.ttf in Resources */,
 				7FDAC611FF68414CAB0AF1B2 /* Poppins-Thin.ttf in Resources */,
 				1BC25A65BD5C451192811329 /* Poppins-ThinItalic.ttf in Resources */,
+				24B9A7312BE79E3C0092F2F3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
