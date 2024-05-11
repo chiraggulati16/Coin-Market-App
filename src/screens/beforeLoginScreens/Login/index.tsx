@@ -11,8 +11,13 @@ import {Images} from '../../../assets/ImageProperties';
 import NavigationService from '../../../navigation/NavigationService';
 import auth from '@react-native-firebase/auth';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
+import { useDispatch } from 'react-redux';
+import { setUserData } from '../../../redux/slices/auth';
+import { setItem } from '../../../service/AsyncStoreConfig';
 
 const Login = () => {
+
+  const dispatch = useDispatch();
 
   GoogleSignin.configure({
     webClientId: '50606158748-qalaofdpt721h8jdpp0e2erod4aor1kj.apps.googleusercontent.com',
@@ -27,7 +32,10 @@ const Login = () => {
       // Get the users ID token
       const { idToken, user } = await GoogleSignin.signIn();
     
-      console.log(user)
+      dispatch(setUserData(user));
+      
+      setItem("userData",JSON.stringify(user));
+      
       // Create a Google credential with the token
       const googleCredential = auth.GoogleAuthProvider.credential(idToken);
     

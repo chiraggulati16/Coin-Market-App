@@ -18,7 +18,6 @@ const BeforeLoginNavigator = () => {
             <BeforeLoginStack.Screen name={Screen.ONBOARDING} component={Intro} />
             <BeforeLoginStack.Screen name={Screen.LOGIN} component={Login} />
             <BeforeLoginStack.Screen name={Screen.SIGNUP} component={Signup} />
-            <BeforeLoginStack.Screen name={Screen.HOME_TAB} component={HomeTabs}/>
         </BeforeLoginStack.Navigator>
     )
 }

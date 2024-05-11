@@ -8,7 +8,6 @@ import {ListingData, ListingRequest, State} from '../../../models';
 import {useDispatch, useSelector} from 'react-redux';
 import CoinDataRow from './CoinDataRow';
 import { getListingData, setStart } from '../../../redux/slices/home';
-import { AppDispatch } from '../../../redux/store';
 
 const HomeScreen = () => {
   const [marketData, setMarketData] = useState<ListingData[]>([]);
