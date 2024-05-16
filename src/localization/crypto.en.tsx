@@ -31,5 +31,12 @@ export default {
   MARKET_CAP: "Market Cap",
   PRICE: "Price",
   VOL_CHANGE_24H: "24h %",
-  HASH: "#"
+  HASH: "#",
+  COINS: "Coins",
+  WATCHLIST: "Watchlist",
+  OVERVIEW: "Overview",
+  NFT: "NFT",
+  EXCHANGES: "Exchanges",
+  CHAINS: "Chains",
+  CATEGORIES: "Categories"
 };
