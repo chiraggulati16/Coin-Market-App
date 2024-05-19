@@ -13,7 +13,8 @@ export const styles = StyleSheet.create({
   rankingNo: {
     flex: 0.12,
     fontFamily: Fonts.poppins400,
-    fontSize: moderateScale(11),
+    fontSize: moderateScale(13),
+    marginLeft: scale(5)
   },
   nameContainer: {
     flex: 0.8,
@@ -22,24 +23,25 @@ export const styles = StyleSheet.create({
   },
   name: {
     fontFamily: Fonts.poppins500,
-    fontSize: moderateScale(11),
+    fontSize: moderateScale(13),
   },
   marketCap: {
     fontFamily: Fonts.poppins500,
-    fontSize: moderateScale(11),
+    fontSize: moderateScale(13),
     marginTop: verticalScale(3),
-    color: Colors.light.grey700
+    color: Colors.light.grey500
   },
   icon: {
-    width: scale(18),
-    height: scale(18),
+    width: scale(20),
+    height: scale(20),
     borderRadius: scale(20)
   },
   price: {
     flex: 0.5,
     textAlign: 'right',
     fontFamily: Fonts.poppins500,
-    fontSize: moderateScale(11),
+    fontSize: moderateScale(13),
+    marginRight: scale(15)
   },
   volChange: {
     textAlign: 'right',
@@ -51,7 +53,8 @@ export const styles = StyleSheet.create({
   },
   volChangeContainer: {
     flex: 0.45,
-    justifyContent: "center"
+    justifyContent: "center",
+    marginRight: scale(5)
   },
   iconSvg: {
    alignSelf: "flex-end",

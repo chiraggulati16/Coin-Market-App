@@ -31,7 +31,8 @@ const CoinDataRow = ({data, index}: CoinRowProps) => {
       </Text>
 
       <View style={styles.volChangeContainer}>
-        <ImageHandler urlSuffix={`${data?.id}.svg`} styling={styles.iconSvg} />
+        <ImageHandler urlSuffix={`${data?.id}.svg`} styling={styles.iconSvg}
+           profit={data?.quote?.USD?.percent_change_24h < 0} />
         <View style={styles.profitContainer}>
         <Image
             source={data?.quote?.USD?.percent_change_24h < 0 ? Images.DownArrow : Images.UpArrow}

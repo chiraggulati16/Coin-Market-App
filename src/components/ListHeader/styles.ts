@@ -15,6 +15,7 @@ export const styles = StyleSheet.create({
     fontFamily: Fonts.poppins400,
     fontSize: moderateScale(11),
     color: Colors.light.grey700,
+    marginLeft: scale(5)
   },
   name: {
     flex: 0.8,
@@ -28,6 +29,7 @@ export const styles = StyleSheet.create({
     fontFamily: Fonts.poppins400,
     fontSize: moderateScale(11),
     color: Colors.light.grey700,
+    marginRight: scale(15)
   },
   volChange: {
     flex: 0.45,
@@ -35,5 +37,6 @@ export const styles = StyleSheet.create({
     fontFamily: Fonts.poppins400,
     fontSize: moderateScale(11),
     color: Colors.light.grey700,
+    marginRight: scale(5)
   },
 });
