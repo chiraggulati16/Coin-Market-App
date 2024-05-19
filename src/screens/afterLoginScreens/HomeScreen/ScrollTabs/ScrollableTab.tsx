@@ -43,10 +43,10 @@ const ScrollableTab = () => {
           index === selectedTab ? styles.selectedTabItem : null,
         ]}>
         <Text
-          style={[
-            styles.tabText,
-            {color: index == selectedTab ? '#555555' : '#b0b0b0'},
-          ]}>
+          style={
+            {color: index == selectedTab ? Colors.light.primary : Colors.light.grey500,
+            fontFamily: index == selectedTab ? Fonts.poppins600 : Fonts.poppins400
+          }}>
           {item}
         </Text>
       </Pressable>
@@ -55,7 +55,7 @@ const ScrollableTab = () => {
 
   const renderBottomView = ({item}: any) => {
     return (
-      <TabContent tab={item} content={`Tab content of ${selectedTab} tab`} />
+      <TabContent tab={item}/>
     );
   };
 
@@ -98,12 +98,13 @@ const ScrollableTab = () => {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
+    marginTop: verticalScale(10)
   },
   scrollView: {
     flex: 1,
   },
   tabText: {
-    fontFamily: Fonts.poppins600,
+    fontFamily: Fonts.poppins400,
   },
   selectedTabItem: {
     borderBottomWidth: scale(2),

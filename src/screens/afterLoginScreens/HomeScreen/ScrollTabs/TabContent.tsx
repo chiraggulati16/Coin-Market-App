@@ -5,7 +5,6 @@ import { verticalScale } from 'react-native-size-matters';
 
 interface TabContentProps {
   tab: string;
-  content: any;
 }
 const TabContent = (props: TabContentProps) => {
   const width = Dimensions.get('window').width;

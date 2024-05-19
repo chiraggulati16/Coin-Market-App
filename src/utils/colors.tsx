@@ -2,7 +2,7 @@
 const commonColors = {
     purple100: "#3861fb",
     red: "#ff0000",
-    green: "#00ff00"
+    green: "#32CD32"
 }
 export const Colors = {
     light: {

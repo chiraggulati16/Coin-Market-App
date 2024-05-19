@@ -1,11 +1,12 @@
 import React from 'react';
-import {Text, TouchableOpacity, View} from 'react-native';
+import {Image, Text, TouchableOpacity, View} from 'react-native';
 import {CoinRowProps} from '../../../../models';
 import {styles} from './styles';
 import {formatNumber} from '../../../../utils/utils';
 import {Colors, Screen} from '../../../../utils';
 import {ImageHandler} from '../../../../service/ImageHandler';
 import NavigationService from '../../../../navigation/NavigationService';
+import { Images } from '../../../../assets/ImageProperties';
 
 const CoinDataRow = ({data, index}: CoinRowProps) => {
 
@@ -31,6 +32,12 @@ const CoinDataRow = ({data, index}: CoinRowProps) => {
 
       <View style={styles.volChangeContainer}>
         <ImageHandler urlSuffix={`${data?.id}.svg`} styling={styles.iconSvg} />
+        <View style={styles.profitContainer}>
+        <Image
+            source={data?.quote?.USD?.percent_change_24h < 0 ? Images.DownArrow : Images.UpArrow}
+            style={styles.profitIcon}
+            resizeMode="contain"
+          />
         <Text
           style={[
             styles.volChange,
@@ -43,6 +50,7 @@ const CoinDataRow = ({data, index}: CoinRowProps) => {
           ]}>
           {data?.quote?.USD?.percent_change_24h.toFixed(2) + '%'}
         </Text>
+        </View>
       </View>
     </TouchableOpacity>
   );

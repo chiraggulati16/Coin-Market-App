@@ -38,5 +38,7 @@ export default {
   NFT: "NFT",
   EXCHANGES: "Exchanges",
   CHAINS: "Chains",
-  CATEGORIES: "Categories"
+  CATEGORIES: "Categories",
+  VOLUME: "Volume",
+  DOMINANCE: "Dominance"
 };

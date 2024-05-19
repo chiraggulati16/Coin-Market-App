@@ -57,4 +57,14 @@ export const styles = StyleSheet.create({
    alignSelf: "flex-end",
    resizeMode: "contain"
   },
+  profitIcon: {
+    width: scale(7),
+    height: scale(7),
+    marginRight: scale(4)
+  },
+  profitContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-end"
+  }
 });
