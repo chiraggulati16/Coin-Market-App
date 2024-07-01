@@ -19,5 +19,5 @@ export const Images = {
     User: require("./images/user.png"),
     UpArrow: require("./images/up.png"),
     DownArrow: require("./images/down.png"),
-    circleImg: require("./images/circleImg.png")
+    circleImg: require("./images/circleImg.png"),
 }

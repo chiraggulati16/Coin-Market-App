@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
 import {CoinRowProps} from '../../../../models';
 import {styles} from './styles';
@@ -13,6 +13,7 @@ const CoinDataRow = ({data, index}: CoinRowProps) => {
   const naviagteToDetail = () => {
     NavigationService.navigate(Screen.HOME_DETAILS)
   }
+  
   return (
     <TouchableOpacity style={styles.container} onPress={naviagteToDetail}>
       <Text style={styles.rankingNo}>{index + 1}</Text>
@@ -55,6 +56,6 @@ const CoinDataRow = ({data, index}: CoinRowProps) => {
       </View>
     </TouchableOpacity>
   );
-};
+}
 
 export default React.memo(CoinDataRow);

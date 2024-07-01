@@ -100,9 +100,6 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: verticalScale(10)
   },
-  scrollView: {
-    flex: 1,
-  },
   tabText: {
     fontFamily: Fonts.poppins400,
   },

@@ -3,6 +3,9 @@ import {moderateScale, scale, verticalScale} from 'react-native-size-matters';
 import {Colors, Fonts} from '../../utils';
 
 export const styles = StyleSheet.create({
+  mainContainer: {
+    backgroundColor: Colors.light.grey
+  },
   container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
