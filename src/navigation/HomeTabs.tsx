@@ -12,6 +12,7 @@ import { AppContext } from '../context/AppContext';
 import HeaderWithSearch from '../components/HeaderWithSearch';
 import GlobalMarket from '../components/GlobalMarket/GlobalMarket';
 import HeaderAnimation from '../components/CustomHeaderAnim';
+import NewsScreen from '../screens/afterLoginScreens/NewsScreen';
 
 const Tab = createBottomTabNavigator();
 const HomeTabs = () => {
@@ -37,10 +38,16 @@ const HomeTabs = () => {
     {
       icon: Images.News,
       name: Labels.NEWS,
-      component: HomeScreen,
+      component: NewsScreen,
       tabOptions: {
         tabBarLabel: Labels.NEWS,
-        tabBarVisible: true
+        tabBarVisible: true,
+        headerShown: true,
+        header: () => (
+          <HeaderAnimation headerHeight={scale(56)}>
+            <HeaderWithSearch headerTitle={Labels.NEWS} />
+          </HeaderAnimation>
+        ),
       }
     },
     {
@@ -84,9 +91,8 @@ const HomeTabs = () => {
       }}>
      {
       tabs.map((tab, index) => (
-        <Tab.Screen key={index} name={tab.name} options={tab.tabOptions}>
-          {()=> tab.component()}
-        </Tab.Screen>
+        <Tab.Screen key={index} name={tab.name} options={tab.tabOptions}
+        component={tab.component}/>
       ))
      }
     </Tab.Navigator>

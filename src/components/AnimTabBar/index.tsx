@@ -1,4 +1,4 @@
-import {Image, Text, View} from 'react-native';
+import {Image, Text, TouchableOpacity, View} from 'react-native';
 import Animated, {useSharedValue, withSpring} from 'react-native-reanimated';
 import {scale, verticalScale} from 'react-native-size-matters';
 import {styles} from './styles';
@@ -10,7 +10,7 @@ import { AppContext } from '../../context/AppContext';
 const BOTTOMTABHEIGHT = verticalScale(50);
 
 const AnimTabBar = (props: any) => {
-  const {tabs, state} = props;
+  const {tabs, state, navigation} = props;
 
   const { value } = useContext(AppContext);
 
@@ -24,6 +24,11 @@ const AnimTabBar = (props: any) => {
     restSpeedThreshold: 0.1,
   });
 
+  const onPress = (index: number) => {
+    const tab = state.routes[index].name;
+    navigation.navigate(tab);
+  };
+
 
   const renderTab = () => {
     return (
@@ -34,7 +39,8 @@ const AnimTabBar = (props: any) => {
             const isFocused = state?.index === index;
 
             return (
-              <View style={styles.mainContainer} key={index}>
+              <TouchableOpacity style={styles.mainContainer} key={index}
+              onPress={()=> onPress(index)}>
                 <Image
                   source={tab.icon}
                   tintColor={
@@ -53,7 +59,7 @@ const AnimTabBar = (props: any) => {
                   ]}>
                   {label}
                 </Text>
-              </View>
+              </TouchableOpacity>
             );
           })}
         </View>

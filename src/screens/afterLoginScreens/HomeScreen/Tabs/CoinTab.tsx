@@ -1,18 +1,16 @@
 import {FlatList, View} from 'react-native';
 import ListHeader from '../../../../components/ListHeader';
 import CoinDataRow from '../CoinDataRow';
-import {useContext, useEffect, useMemo, useRef, useState} from 'react';
+import {useContext, useEffect, useMemo, useRef} from 'react';
 import { ListingRequest, State} from '../../../../models';
 import {useDispatch, useSelector} from 'react-redux';
-import {getListingData, setStart} from '../../../../redux/slices/home';
-import { useNavigation } from '@react-navigation/native';
+import {getListingData} from '../../../../redux/slices/home';
 import { AppContext } from '../../../../context/AppContext';
 
 const CoinTab = () => {
   const dispatch = useDispatch<any>();
   const homeState = useSelector((state: State) => state.homeReducer);
   const previousScroll = useRef<any>(0);
-  const navigation = useNavigation();
   const {setValue} = useContext(AppContext);
 
   useEffect(() => {

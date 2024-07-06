@@ -14,7 +14,8 @@ export const styles = StyleSheet.create({
     flex: 0.12,
     fontFamily: Fonts.poppins400,
     fontSize: moderateScale(13),
-    marginLeft: scale(5)
+    marginLeft: scale(5),
+    color: Colors.light.grey500
   },
   nameContainer: {
     flex: 0.8,
@@ -24,6 +25,7 @@ export const styles = StyleSheet.create({
   name: {
     fontFamily: Fonts.poppins500,
     fontSize: moderateScale(13),
+    color: Colors.light.primary
   },
   marketCap: {
     fontFamily: Fonts.poppins500,
@@ -41,7 +43,8 @@ export const styles = StyleSheet.create({
     textAlign: 'right',
     fontFamily: Fonts.poppins500,
     fontSize: moderateScale(13),
-    marginRight: scale(15)
+    marginRight: scale(15),
+    color: Colors.light.primary
   },
   volChange: {
     textAlign: 'right',
